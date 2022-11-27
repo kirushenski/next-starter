@@ -1,19 +1,25 @@
 import Head from 'next/head'
-import { AppPropsWithLayout } from '~types/index'
 import 'focus-visible'
-import 'modern-normalize/modern-normalize.css'
-import '~styles/theme.css'
-import '~styles/helpers.css'
-import '~styles/global.css'
+import { AppProps } from 'next/app'
+import { Inter } from '@next/font/google'
+import GlobalStyle from '~lib/globalStyle'
 
-const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
-  const getLayout = Component.getLayout ?? ((page) => page)
+const inter = Inter({ subsets: ['latin'] })
 
-  return getLayout(
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return (
     <>
+      <style jsx global>{`
+        :root {
+          --font-base: ${inter.style.fontFamily};
+        }
+      `}</style>
+      <GlobalStyle />
       <Head>
         <title>Next Starter</title>
         <meta name="description" content="Opinionated setup of Next.js-based project" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#000" />
       </Head>
       <Component {...pageProps} />
     </>

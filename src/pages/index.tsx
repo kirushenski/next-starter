@@ -1,15 +1,8 @@
-import { ReactNode } from 'react'
-import { Layout } from '~components/Layout'
-import { NextPageWithLayout } from '~types/index'
+import { NextPage } from 'next'
+import { HomePage as HomePageComponent } from '~components/HomePage'
 
-const HomePage: NextPageWithLayout = () => {
-  return (
-    <div>
-      <h1>Next Starter</h1>
-    </div>
-  )
+const HomePage: NextPage = () => {
+  return <HomePageComponent />
 }
-
-HomePage.getLayout = (page: ReactNode) => <Layout>{page}</Layout>
 
 export default HomePage

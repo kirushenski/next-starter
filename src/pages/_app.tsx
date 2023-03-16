@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import 'focus-visible'
 import { AppProps } from 'next/app'
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 import GlobalStyle from '~lib/globalStyle'
 
 const inter = Inter({ subsets: ['latin'] })

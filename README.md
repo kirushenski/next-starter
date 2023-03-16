@@ -1,6 +1,6 @@
 # Next Starter
 
-> Project is build with `Next.js`, requires `node` >= 14.0.0 and uses `npm` as the package manager
+> Project is build with `Next.js`, requires `node` >= 18.0.0 and uses `npm` as the package manager
 
 ## Local development
 
